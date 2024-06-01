@@ -1,0 +1,18 @@
+Esercizio 1 - 14/7/2020 A
+
+Sia data la seguente struttura Mat:
+
+  struct Mat {
+    int cols; // numero di colonne
+    int rows; // numero di righe
+    int** row_ptrs; // puntatori alle righe
+  };
+  
+Implementare la funzione C:
+
+  void applicaFiltro(Mat *src, Mat *filtro, int colonna, int riga);
+      
+che, data in input una matrice src NxM, una matrice filtro NfxMf, un indice di riga riga e un indice di colonna colonna, modifichi la matrice di input src applicando il filtro in posizione
+(riga, colonna). Applicare il filtro in posizione (riga, colonna) significa moltiplicare gli elementi della sottomatrice di src di dimensioni NfxMf,
+avente angolo in alto a sinistra corrispondente all'elemento in posizione (riga, colonna) con gli elementi della matrice filtro, elemento per elemento.
+Qualora il filtro applicato in una certa posizione eccedesse le dimensioni della matrice src, il filtro va moltiplicato solo per la porzione corrispondente alle componenti della matrice esistenti.
