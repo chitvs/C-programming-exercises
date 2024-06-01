@@ -1,0 +1,22 @@
+Esercizio 1 - 20-07-2022
+
+Si scriva una funzione:
+
+  int* controlla_colonne(Mat *m, double w, double v);
+  
+che prenda in input una matrice m di numeri interi e due double w e v. 
+La funzione deve restituire un array di interi in cui il valore in posizione i è pari a 1, se la media degli elementi nella colonna i-esima di m è compresa tra w e v (w ≤ media ≤ v), 0 altrimenti.
+Si assuma w ≤ v.
+
+Esempio
+
+m:
+1 8 3 
+4 5 6
+7 8 3
+
+w: 3
+v: 5
+
+return: [1, 0, 1] 
+(perché le medie delle colonne sono rispettivamente 4.0, 7.0, 4.0)
