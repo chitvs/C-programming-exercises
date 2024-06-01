@@ -1,0 +1,52 @@
+Esercizio 2.1 - 14/7/2020 A
+
+Sia data una struttura collegata lineare di interi TipoSCL, definita come segue:
+
+typedef int TipoInfoSCL;
+
+struct NodoSCL {
+  TipoInfoSCL info;
+  struct NodoSCL * next;
+};
+
+typedef struct NodoSCL TipoNodo;
+typedef TipoNodo * TipoSCL;
+
+Scrivere una funzione C RICORSIVA
+
+  int sommaElementi(TipoSCL lis, int i, int j);
+  
+che, dati in input una SCL lis di interi positivi e due indici i e j, restituisca la somma degli elementi di lis di indice i e j (il primo elemento della SCL ha indice 0).
+Si gestisca il caso in cui il puntatore lis è nullo, restituendo -1.
+Nel caso in cui uno o entrambi gli indici fossero maggiori della lunghezza della SCL, restituire -1.
+
+Esempio: Data la seguente SCL in ingresso:
+
+lis = 1 -> 3 -> 8 -> 9 -> 7 -> 6 -> 9
+
+e gli indici
+	i = 2;
+	j = 4;
+la chiamata a sommaElementi(lis, i, j) restituirà il valore 15
+
+Esercizio 2.2 - 14/7/2020 A
+
+Scrivere una funzione C
+
+  void sommatoriaDispari(TipoSCL lis, TipoSCL ris);
+  
+che, date in input due SCL di interi lis e ris aventi stessa dimensione, inserisca in ris gli stessi elementi di lis rimpiazzandone quelli di indice dispari i con la somma
+di tutti gli elementi di lis aventi indice dispari j <= i.
+Il primo elemento di una SCL ha indice 0. Si consideri ris già allocata e di opportuna dimensione.
+
+Esempio:
+
+Data la SCL
+
+	lis = 5 -> 6 -> 7 -> 1 -> 2 -> 3 -> 8 -> 9
+ 
+assumendo che ris sia una SCL qualsiasi di dimensione 8, dopo l'invocazione
+	sommatoriaDispari(lis,ris)
+si deve avere:
+
+	ris = 5 -> 6 -> 7 -> 7 -> 2 -> 10 -> 8 -> 19
