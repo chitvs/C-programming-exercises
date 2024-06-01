@@ -8,6 +8,7 @@ che data in input una matrice di interi m di dimensione 2Nx2N, restituisca la so
 Nota: in caso di stessa media restituire quella che ha il primo elemento nella matrice originale di indice riga minore, a parità di indice riga quello con anche indice colonna minore.
 
 Esempio 1
+
 m:
 5 8
 9 1
@@ -19,6 +20,7 @@ la sottomatrice 1x1 che ritorneremo è:
 la quale ha media 9.0, superiore a tutte le altre.
 
 Esempio 2
+
 m:
 0 4 2 0
 0 3 4 0
