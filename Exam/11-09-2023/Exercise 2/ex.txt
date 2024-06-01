@@ -11,7 +11,10 @@ Scrivere una funzione ricorsiva:
 
   TipoLista sommeDueADue(TipoLista l);
 
-la quale riceve una lista di interi l. La funzione deve restituire una lista output di lunghezza pari all'intero superiore della metà della lunghezza di l (se l ha lunghezza 5, output ha una lunghezza pari all'intero superiore di 5/2, ovvero 3). L'elemento i-esimo di output deve essere pari alla somma degli elementi 2*i-1-iesimo e 2*i-iesimo. Se l ha una lunghezza dispari, allora l'ultimo elemento di output è pari alla somma dell'ultimo elemento di l con il primo elemento di l.
+la quale riceve una lista di interi l. La funzione deve restituire una lista output di lunghezza pari all'intero superiore della metà della lunghezza di l,
+(se l ha lunghezza 5, output ha una lunghezza pari all'intero superiore di 5/2, ovvero 3).
+L'elemento i-esimo di output deve essere pari alla somma degli elementi 2*i-1-iesimo e 2*i-iesimo.
+Se l ha una lunghezza dispari, allora l'ultimo elemento di output è pari alla somma dell'ultimo elemento di l con il primo elemento di l.
 
 Nota bene:
 1) se l è una lista vuota, la funzione deve restituire una lista vuota.
