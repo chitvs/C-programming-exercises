@@ -1,0 +1,50 @@
+Esercizio 2 - 20-07-2022
+  
+Regole
+Nell'esercizio 2.1, non usare gli array
+In entrambi 2.1 e 2.2, accedere alla struttura solo tramite l'interfaccia della lista fornita (ad esempio, non è consentito accedere a next e info).
+I metodi dell'interfaccia lista validi sono tutti quelli presenti nel file aux.h.
+
+Esercizio 2.1
+
+Si implementi la funzione ricorsiva:
+
+  int posizioni_alternanza(TipoLista l)
+
+la quale restituisce la lunghezza del più lungo prefisso p di l che soddisfa la seguente condizione:
+p[i] = p[i+2k] per ogni k = 0, 1, 2, …, per i = 0, 1
+In altre parole, la funzione restituisce la lunghezza del più lungo prefisso di p contenente una ripetizione di caratteri nelle posizioni pari e nelle posizioni dispari.
+
+Esempio
+  
+l: ['a', 'c', 'a', 'd']
+return: 3
+
+l: ['a', 'b', 'c', 'd']
+return: 2
+
+l: ['a', 'a', 'a', 'a', 'a']
+return: 5
+  
+Esercizio 2.2
+  
+Scrivere una funzione:
+
+  char * prefisso_alternante(TipoLista *liste, int n)
+    
+la quale riceve in ingresso un array contenente n liste.
+All’interno dell’array, la funzione deve trovare la lista lmax contenente il prefisso alternante più lungo (secondo quanto definito nell’esercizio 2.1).
+La funzione deve restituire una stringa contenente i caratteri di lmax che seguono il prefisso alternante (quindi, il prefisso non compare nella stringa in output).
+Si assuma n > 0.
+
+Suggerimento: ricordarsi di terminare correttamente la stringa in output.
+
+Esempio
+  
+liste: [
+    [ 'a', 'b', 'c' ],
+    [ 'c', 'd', 'c', 'e', 'f' ]
+]
+n: 2
+
+return: "ef"
