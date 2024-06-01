@@ -12,7 +12,34 @@ Implementare la funzione C:
 
   void applicaFiltro(Mat *src, Mat *filtro, int colonna, int riga);
       
-che, data in input una matrice src NxM, una matrice filtro NfxMf, un indice di riga riga e un indice di colonna colonna, modifichi la matrice di input src applicando il filtro in posizione
-(riga, colonna). Applicare il filtro in posizione (riga, colonna) significa moltiplicare gli elementi della sottomatrice di src di dimensioni NfxMf,
+che, data in input una matrice src NxM, una matrice filtro NfxMf, un indice di riga riga e un indice di colonna colonna, modifichi la matrice di input src applicando il filtro
+in posizione (riga, colonna). Applicare il filtro in posizione (riga, colonna) significa moltiplicare gli elementi della sottomatrice di src di dimensioni NfxMf,
 avente angolo in alto a sinistra corrispondente all'elemento in posizione (riga, colonna) con gli elementi della matrice filtro, elemento per elemento.
 Qualora il filtro applicato in una certa posizione eccedesse le dimensioni della matrice src, il filtro va moltiplicato solo per la porzione corrispondente alle componenti della matrice esistenti.
+
+Esempio
+
+Data la seguente matrice src 4x5:
+	5	-3	6	1	0
+	7	-4	1	-2	3
+	8	7	2	5	4
+	3	2	11	0	-1
+      
+e una matrice filtro 2x2:
+	3	0	
+	0	3	
+      
+l'applicazione del filtro alla matrice in posizione (1,1) ha il seguente risultato
+applicaFiltro(src, filtro, 1, 1) = 
+
+	5	-3	6	1	0
+	7	-12	0	-2	3
+	8	0	6	5	4
+	3	2	11	0	-1
+      
+l'applicazione del filtro su una componente sul bordo della matrice ha il seguente risultato
+applicaFiltro(src, filtro, 1, 4) = 
+	5	-3	6	1	0
+	7	-4	1	-2	9
+	8	7	2	5	0
+	3	2	11	0	-1
