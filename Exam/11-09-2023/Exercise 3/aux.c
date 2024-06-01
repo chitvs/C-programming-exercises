@@ -57,30 +57,30 @@ void stampaParentetica(TipoAlbero a){
   if (estVuoto(a)) {
     printf("()");}
   else{
-    printf("( ");
-    stampaInfoAlbero(radice(a));
-    printf(" ");
-    stampaParentetica(sinistro(a));
-    printf(" ");
-    stampaParentetica(destro(a));
-    printf(" )");}
+  printf("( ");
+  stampaInfoAlbero(radice(a));
+  printf(" ");
+  stampaParentetica(sinistro(a));
+  printf(" ");
+  stampaParentetica(destro(a));
+  printf(" )");}
 }
 
 void stampa_albero_aux(TipoAlbero a, int livello){
-	for (int i = 0; i < livello; ++i)
-		putchar(' ');
-	putchar('-');
-	if (estVuoto(a)){
-	  puts("");
-		return;}
-	printf(" %d\n", radice(a));
-	stampa_albero_aux(sinistro(a), livello + 1);
-	stampa_albero_aux(destro(a), livello + 1);
+  for (int i = 0; i < livello; ++i)
+    putchar(' ');
+  putchar('-');
+  if (estVuoto(a)){
+    puts("");
+    return;}
+  printf(" %d\n", radice(a));
+  stampa_albero_aux(sinistro(a), livello + 1);
+  stampa_albero_aux(destro(a), livello + 1);
 }
 
 void stampaAlbero(TipoAlbero a){
-	stampa_albero_aux(a, 0);
-	puts("");
+  stampa_albero_aux(a, 0);
+  puts("");
 }
 
 // Lettura da file
@@ -91,35 +91,34 @@ void leggiParentesi(FILE *file_albero){
 }
 
 TipoAlbero leggiAlberoStringaAux(TipoAlbero a, const char **str){
-	// Inizio albero
-	if (**str != '(') {
-		fprintf(stderr, "Incorretta stringa parentetica\n");
-		return albBinVuoto();
-	}
-	++(*str);
-	// Se vuoto
-	bool vuoto = **str == ')';
-	if (**str == ')') {
-		++(*str);
-		return albBinVuoto();}
-	// Leggi valore
-	int info;
-	int read_chars;
-	sscanf(*str, "%d%n", &info, &read_chars);
-	*str += read_chars;
-	// Leggi sottoalberi
-	TipoAlbero left, right;
-	leggiAlberoStringaAux(left, str);
-	leggiAlberoStringaAux(right, str);
-	// Fine albero
-	if (**str != ')') {
-		fprintf(stderr, "Incorretta stringa parentetica\n");
-		return albBinVuoto();}
-	++(*str);
-	return creaAlbBin(info, left, right);
+  // Inizio albero
+  if (**str != '(') {
+    fprintf(stderr, "Incorretta stringa parentetica\n");
+    return albBinVuoto();}
+  ++(*str);
+  // Se vuoto
+  bool vuoto = **str == ')';
+  if (**str == ')') {
+    ++(*str);
+    return albBinVuoto();}
+  // Leggi valore
+  int info;
+  int read_chars;
+  sscanf(*str, "%d%n", &info, &read_chars);
+  *str += read_chars;
+  // Leggi sottoalberi
+  TipoAlbero left, right;
+  leggiAlberoStringaAux(left, str);
+  leggiAlberoStringaAux(right, str);
+  // Fine albero
+  if (**str != ')') {
+    fprintf(stderr, "Incorretta stringa parentetica\n");
+    return albBinVuoto();}
+  ++(*str);
+  return creaAlbBin(info, left, right);
 }
 
 TipoAlbero leggiAlberoStringa(TipoAlbero a, const char *str) {
-	const char *s = str;
-	return leggiAlberoStringaAux(a, &s);
+  const char *s = str;
+  return leggiAlberoStringaAux(a, &s);
 }
