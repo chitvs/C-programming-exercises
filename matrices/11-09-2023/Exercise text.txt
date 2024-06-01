@@ -1,9 +1,9 @@
 Esercizio 1 - 23-01-2023
 
 Si scriva una funzione:
-```c
+
 Mat* massima_sottomatrice(Mat *m);
-```
+
 che data in input una matrice di interi m di dimensione 2Nx2N, restituisca la sottomatrice NxN di m la cui media degli elementi è massima.
 Nota: in caso di stessa media restituire quella che ha il primo elemento nella matrice originale di indice riga minore, a parità di indice riga quello con anche indice colonna minore.
 
