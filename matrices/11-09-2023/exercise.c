@@ -5,7 +5,7 @@
 #include "aux.h"
 
 Mat* trasforma(Mat* m){
-	Mat* m2 = mat_alloc(m->rows,m->cols);
+  Mat* m2 = mat_alloc(m->rows,m->cols);
   for (int i=0;i<m2->rows;i++){
     for (int j=0;j<m->cols;j++){
     	m2->mat[i][j] = m->mat[i][j]-i+j;}}
