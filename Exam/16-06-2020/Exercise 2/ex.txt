@@ -1,0 +1,48 @@
+Esercizio 2.1 - 16/6/2020 C
+
+Sia data una struttura collegata lineare di interi TipoSCL, definita come segue:
+
+typedef int T;
+
+struct NodoSCL {
+  T info;
+  struct NodoSCL * next;
+};
+
+typedef struct NodoSCL TipoNodo;
+typedef TipoNodo * TipoSCL;
+
+Scrivere una funzione C RICORSIVA
+
+  int contaDecrescenti(TipoSCL lis);
+
+che, data in input una SCL lis, restituisca il numero di elementi che sono inferiori (strettamente) rispetto al loro precedente.
+Si gestisca il caso in cui il puntatore lis è nullo, restituendo 0.
+
+Esempio: Data la seguente lista in ingresso:
+
+lis = 1 -> 3 -> 8 -> 9 -> 7 -> 6 -> 9 
+restituire 2 (7,6)
+  
+Esercizio 2.2 - 16/6/2020 C
+  
+Scrivere una funzione C
+
+  int mergeSequenziale(TipoSCL lis1, TipoSCL lis2);
+
+che date in input 2 SCL lis1 e lis2 crei una nuova lista ottenuta inserendo in maniera alternata gli elementi presi da lis1 e da lis2 e restituisca il numero
+di elementi descrescenti nella lista ottenuta. Gli elementi vanno inseriti prendendo prima un elemento da lis1, poi uno da lis2 e così via.
+
+Nel caso in cui entrambi i puntatori fossero nulli restituire 0.
+Nel caso in cui una delle due SCL fosse vuota e l'altra no restituire il numero di decrescenti della lista non vuota.
+Nel caso le SCL avessero lunghezze diverse, quando una termina inserire i restanti elementi dell'altra.
+Le SCL in ingresso alla funzione non devono essere modificate in alcun modo.
+  
+Esempio: Data le seguenti SCL in ingresso:
+
+lis1 = 1 -> 2 -> 3 
+lis2 = 5 -> 6 -> 7 -> 8 -> 9
+
+mergeSequenziale(lis1, lis2) = 2
+  
+Nota bene: lista creata: (1 -> 5 -> 2 -> 6 -> 3 -> 7 -> 8 -> 9)
