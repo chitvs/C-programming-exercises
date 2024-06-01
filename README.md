@@ -10,7 +10,7 @@ This repository contains a collection of C programming exercises from my univers
 
 ## How to Compile and Run
 
-Navigate to the exercise directory and use `gcc` to compile the C file. For example:
+Navigate to the exercise directory and use `g++` to compile the C file. For example:
 
 ```sh
 cd Exercise1
