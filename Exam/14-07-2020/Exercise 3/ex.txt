@@ -1,0 +1,47 @@
+Esercizio 3 - 14/7/2020 A
+
+Sia data la seguente rappresentazione di alberi binari:
+
+typedef int TipoInfoAlbero;
+
+typedef struct StructAlbero {
+  TipoInfoAlbero info;
+  struct StructAlbero* sinistro;
+  struct StructAlbero* destro;
+} TipoNodoAlbero;
+
+typedef TipoNodoAlbero* TipoAlbero;
+
+Scrivere una funzione C
+
+  TipoInfoAlbero sommaMassimaPercorso(TipoAlbero a)
+  
+Che, dato un albero binario a, restituisca il massimo della somma dei nodi contenuti in un percorso dalla radice a una foglia.
+
+Esempio: dato l' albero a
+
+( 4 ( 2 ( 6 () () ) () ) ( 3 ( 1 () () ) () ) )
+
+         4 
+       _/ \_   
+      /     \  
+     2       3 
+     |       |   
+    /       /    
+   6       1     
+
+a contiene due percorsi dalla radice a una foglia: 4->2->6 (con somma 12) e 4->3->1 (con somma 8).
+Perciò il risultato della chiamata di sommaMassimaPercorso(a) è 12
+
+Dato l'albero a
+( 1 ( 2 ( 6 () () ) () ) ( 100 () () ) )
+           
+         1 
+       _/ \_   
+      /     \  
+     2       100 
+     |          
+    /           
+   6       
+
+il risultato della chiamata di sommaMassimaPercorso(a) è 1+100 = 101
