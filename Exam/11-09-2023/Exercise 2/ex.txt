@@ -58,7 +58,8 @@ Scrivere una funzione:
 
   double* mediaSommeDueADue(TipoLista* liste, int n);
 
-la quale riceve un array di n liste di interi. La funzione deve restituire un array di lunghezza pari a n dove l’elemento di indice i dell’array è pari alla media degli elementi della lista ottenuta applicando sommeDueADue alla lista di indice i dell’array liste.
+la quale riceve un array di n liste di interi. La funzione deve restituire un array di lunghezza pari a n,
+dove l’elemento di indice i dell’array è pari alla media degli elementi della lista ottenuta applicando sommeDueADue alla lista di indice i dell’array liste.
 
 Nota bene:
 1) si consideri la media degli elementi di una lista vuota pari a 0.0
