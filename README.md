@@ -1,12 +1,13 @@
 # C Programming Exam Exercises
 
-This repository contains a collection of C programming exercises from my university exams. Each exercise is organized in its own folder, including source code and relevant documentation.
+This repository contains a collection of C programming exercises taken from my university exams. Each exercise is neatly organized within its dedicated folder, encompassing both the source code and pertinent documentation.
+The exercises are meticulously organized in chronological order based on their exam date, providing a structured approach for study and review sessions. These exercises cover a wide range of topics, including:
 
-## Contents
+- Matrix operations and arrays
+- Linked lists and linear data structures
+- Binary trees and tree traversal algorithms
 
-- Various C programming problems and solutions
-- Organized by exam and topic
-- Useful for study and review
+This compilation serves as a valuable resource for students aiming to strengthen their understanding of C programming concepts and prepare for examinations effectively.
 
 ## How to Compile and Run
 
@@ -16,3 +17,4 @@ Navigate to the exercise directory and use `g++` to compile the C file. For exam
 cd Exercise1
 g++ -o main main.c
 ./main
+```
