@@ -1,0 +1,42 @@
+Esercizio 3 - 20-07-2022
+
+Implementare la funzione
+
+  TipoAlbero figlio_lontano(TipoAlbero a)
+  
+che restituisce un nuovo albero, avente la stessa struttura di a, in cui il valore di ogni nodo n' del nuovo albero è calcolato dal corrispondente nodo n di a,
+ed è pari alla massima somma dei nodi lungo un cammino da n (n incluso) ad una foglia nel sottoalbero di n.
+
+Nota bene: Non è consentito accedere alla struttura direttamente. E’ necessario usare l’interfaccia del tipo albero in aux.h
+
+Esempio
+
+Dato l'albero:
+
+  3  
+ / \
+2   5
+   / \
+  1   0
+       \
+       -4
+
+Svolgimento (cammini massimi dei sottoalberi): 
+
+    3  
+(2)/ \(6)
+  2   5
+  (1)/ \(-4)
+    1   0
+         \(-4)
+         -4
+ 
+Output: 
+
+  9  
+ / \
+2   6
+   / \
+  1  -4
+       \
+       -4
