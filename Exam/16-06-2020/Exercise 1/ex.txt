@@ -1,0 +1,45 @@
+Esercizio 1 - 16/6/2020 C
+
+Sia data la seguente struttura Mat:
+
+  struct Mat {
+    int cols; // numero di colonne
+    int rows; // numero di righe
+    int** row_ptrs; // puntatori alle righe
+  };
+  
+Implementare la funzione C:
+
+  void bombardamentoNavale(Mat *src, int r, int c);
+      
+La matrice src è composta da 0 e 1. Gli 0 corrispondono a caselle di acqua, gli 1 a parti di nave; r e c sono invece le coordinate su cui deve essere sganciata la bomba sulla matrice src.
+La funzione deve avere il seguente comportamento: se la bomba colpisce l'acqua la matrice rimane immutata; se la bomba colpisce una nave l'affonderà completamente
+(sostituendo 0 a tutti gli 1 corrispondenti a quella nave)
+Nota bene: non possono esserci due navi attaccate, quindi fra una nave e l'altra c'è sempre almeno uno 0.
+
+Esempio
+
+Data una struttura Mat *src contenente la seguente matrice 6x6:
+  0 0 0 0 0 0
+  1 1 1 0 0 0
+  0 0 0 1 0 0
+  0 0 0 1 0 0
+  0 0 0 0 0 0
+  0 0 0 1 1 0
+      
+e le coordinate r c :
+    r = 1;
+    c = 1;
+    
+richiamando la seguente linea di codice:
+
+  bombardamentoNavale(src,r,c);
+      
+la matrice src sarà modificata nel seguente modo:
+
+  0 0 0 0 0 0
+  0 0 0 0 0 0
+  0 0 0 1 0 0
+  0 0 0 1 0 0
+  0 0 0 0 0 0
+  0 0 0 1 1 0
