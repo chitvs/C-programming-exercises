@@ -22,19 +22,19 @@ int minx(Mat* m){
 }
 
 int quad(Mat* m, int start_i, int start_j){
-	int min = minx(m);
+  int min = minx(m);
   int n = (m->rows-1)/2; 
   Mat* m2 = mat_alloc(n,n);
   for (int i=0; i<n; i++){
-   	for (int j=0;j<n;j++){
-  	 	m2->mat[i][j] = m->mat[i+start_i][j+start_j];
-     	if (m2->mat[i][j]<=min){
-    	 	min = m2->mat[i][j];}}}
-	return min;
+    for (int j=0;j<n;j++){
+  	  m2->mat[i][j] = m->mat[i+start_i][j+start_j];
+      if (m2->mat[i][j]<=min){
+        min = m2->mat[i][j];}}}
+  return min;
 }
 
 double trasforma_e_min_quad(Mat* m) {
-	int n = (m->rows/2) +1;
+  int n = (m->rows/2) +1;
   Mat* m2 = trasforma(m);
-	return quad(m2,0,n) + quad(m2,n,0) + quad(m2,0,0) + quad(m2,n,n);
+  return quad(m2,0,n) + quad(m2,n,0) + quad(m2,0,0) + quad(m2,n,n);
 }
