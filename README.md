@@ -14,7 +14,7 @@ This compilation serves as a valuable resource for students aiming to strengthen
 Navigate to the exercise directory and use `g++` to compile the C file. For example:
 
 ```sh
-cd Exam/"date"/"Exercise 1"
+cd Exam/"date"/"Exercise 1"/
 g++ -o main main.c
 ./main
 ```
