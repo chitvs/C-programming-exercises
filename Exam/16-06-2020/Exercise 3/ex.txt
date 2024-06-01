@@ -1,0 +1,45 @@
+Esercizio 3 - 16/6/2020 C
+
+Sia data la seguente rappresentazione di alberi binari:
+
+typedef int TipoInfoAlbero;
+
+typedef struct StructAlbero {
+  TipoInfoAlbero info;
+  struct StructAlbero* sinistro;
+  struct StructAlbero* destro;
+} TipoNodoAlbero;
+
+typedef TipoNodoAlbero* TipoAlbero;
+
+Scrivere una funzione C
+
+  void nodoDivisibile(TipoAlbero a);
+  
+che, dato in input un albero a lo modifichi sostituendo il valore dei nodi il cui valore è divisibile per almeno uno dei figli con il valore 1.
+Se un nodo non ha figli deve rimanere inalterato.
+Se un nodo contiene il valore 0 questo è da considerarsi divisibile per qualsiasi numero eccetto un altro 0.
+Nota bene: Considerare TUTTI i numeri come non divisibili per 0.
+
+Esempio: dato l' albero a
+
+( 4 ( 2 ( 6 () () ) () ) ( 3 ( 1 () () ) () ) )
+
+         4 
+       _/ \_   
+      /     \  
+     2       3 
+     |       |   
+    /       /    
+   6       1     
+
+dopo la chiamata di nodoDivisibile(a), si avrà:
+( 1 ( 2 ( 6 () () ) () ) ( 1 ( 1 () () ) () ) )
+           
+         1 
+       _/ \_   
+      /     \  
+     2       1 
+     |       |   
+    /       /    
+   6       1    
