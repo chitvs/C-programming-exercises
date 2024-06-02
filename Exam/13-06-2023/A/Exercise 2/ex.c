@@ -18,13 +18,10 @@ void modificaLista(TipoLista* l, int k) {
   if (l==NULL || k==0){
     return;}
   else{
-    if (k>0){	
       T aux = (*l)->info;
       *l = aggiungiInCoda(*l,aux);
       *l = (*l)->next;
-      return modificaLista(&(*l),k-1);}
-    else
-      return;}     	
+      return modificaLista(&(*l),k-1);}   	
 }
 
 double somma(TipoLista l){
