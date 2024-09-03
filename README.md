@@ -18,3 +18,7 @@ cd Exam/"date"/"Exercise 1"/
 g++ -o main main.c
 ./main
 ```
+
+## Notes
+
+I have personally completed all the exercises in this repository, so they might not be perfect or the most elegant solutions, but they all work! 😊 This collection reflects my journey through learning and improving my C programming skills, and I hope it can be a helpful resource for others as well.
