@@ -11,6 +11,12 @@ This compilation serves as a valuable resource for students aiming to strengthen
 
 ## How to compile and run
 
+Clone the repository:
+```sh
+git clone https://github.com/chitvs/tdp.git
+cd tdp
+```
+
 Navigate to the exercise directory and use `g++` to compile the C file. For example:
 
 ```sh
